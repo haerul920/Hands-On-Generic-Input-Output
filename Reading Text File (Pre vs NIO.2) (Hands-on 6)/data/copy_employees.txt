@@ -1,0 +1,4 @@
+101, Andi Pratama, IT Department
+102, Siti Aminah, Finance
+103, Budi Santoso, Human Resources
+104, Dewi Lestari, Marketing

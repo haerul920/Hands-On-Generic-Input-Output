@@ -1,0 +1,2 @@
+1001,Andi Pratama,true
+1002,Siti Aminah,false

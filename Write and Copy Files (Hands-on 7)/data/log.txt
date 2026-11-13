@@ -1,0 +1,4 @@
+[2026-11-13 15:46:54] INFO: File sumber 'data/report.txt' berhasil dibuat.
+[2026-11-13 15:46:54] INFO: Pengecekan Files.exists(source) bernilai TRUE. Melanjutkan proses salin.
+[2026-11-13 15:46:54] INFO: Direktori 'data\backup' berhasil dibuat.
+[2026-11-13 15:46:54] SUCCESS: Backup berhasil dibuat di 'data\backup\report.txt'.

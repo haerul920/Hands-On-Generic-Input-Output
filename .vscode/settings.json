@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        "Enum\uff1a Tipe Bank Account (Hands-on 1)/src",
+        "Enum dengan Konstruktor (Hands-on 2)/src",
+        "Generic Class (Hands-on 3)/src",
+        "Generic Class Multi-Tipe (Hands-on 4)/src",
+        "Generic Method (Hands-on 5)/src",
+        "Reading Text File (Pre vs NIO.2) (Hands-on 6)/src",
+        "Write and Copy Files (Hands-on 7)/src",
+        "Try-with-Resources & Stream (Hands-on 8)/src",
+        "Serialization (Hands-on 9)/src",
+        "Unit Testing (JUnit) (Hands-on 10)/src"
+    ]
+}
+
