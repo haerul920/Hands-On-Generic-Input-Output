@@ -9,7 +9,9 @@
         "Write and Copy Files (Hands-on 7)/src",
         "Try-with-Resources & Stream (Hands-on 8)/src",
         "Serialization (Hands-on 9)/src",
-        "Unit Testing (JUnit) (Hands-on 10)/src"
+        "Unit Testing (JUnit) (Hands-on 10)/src",
+        "Notifikasi Multi-Platform (SOLID - Latihan 1)/src",
+        "Penilaian Mahasiswa (SOLID - Latihan 2)/src",
+        "Smart Vehicle (SOLID - Latihan 3)/src"
     ]
 }
-
