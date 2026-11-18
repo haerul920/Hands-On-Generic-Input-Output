@@ -29,7 +29,6 @@ public class WriteUserInputNew {
 
             System.out.println("Ketik teks untuk disimpan ke file (ketik 'exit' untuk berhenti):");
 
-            // Ubah agar menulis beberapa baris hingga pengguna mengetik exit
             while (true) {
                 System.out.print("Enter text: ");
                 if (!sc.hasNextLine()) {
@@ -42,7 +41,6 @@ public class WriteUserInputNew {
                     break;
                 }
 
-                // Tambahkan timestamp pada setiap baris input
                 String timestamp = LocalDateTime.now().format(formatter);
                 String formattedLine = "[" + timestamp + "] " + text;
 
@@ -56,4 +54,3 @@ public class WriteUserInputNew {
         }
     }
 }
-

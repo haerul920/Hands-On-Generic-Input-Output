@@ -32,11 +32,9 @@ public class FileCopyNew {
                 Files.createDirectories(source.getParent());
             }
 
-            // Menulis isi laporan ke file sumber
             Files.write(source, List.of("Report Generated", "Status: OK"), StandardCharsets.UTF_8);
             writeLog(logEntries, "INFO: File sumber 'data/report.txt' berhasil dibuat.");
 
-            // Tambahkan pengecekan file sebelum menyalin (Files.exists())
             if (Files.exists(source)) {
                 writeLog(logEntries, "INFO: Pengecekan Files.exists(source) bernilai TRUE. Melanjutkan proses salin.");
 
@@ -53,7 +51,6 @@ public class FileCopyNew {
         } catch (IOException e) {
             writeLog(logEntries, "ERROR: Terjadi kesalahan I/O - " + e.getMessage());
         } finally {
-            // Buat log hasil operasi ke file log.txt
             try {
                 if (Files.notExists(LOG_PATH.getParent())) {
                     Files.createDirectories(LOG_PATH.getParent());
@@ -67,4 +64,3 @@ public class FileCopyNew {
         }
     }
 }
-

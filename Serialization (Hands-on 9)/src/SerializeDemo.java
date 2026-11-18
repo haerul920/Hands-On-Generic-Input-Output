@@ -28,7 +28,6 @@ class Employee implements Serializable {
 
 public class SerializeDemo {
 
-    // Method serialize untuk menulis objek ke file biner
     public static void serialize(Object obj, String filename) {
         try {
             Path path = Paths.get(filename);
@@ -44,7 +43,6 @@ public class SerializeDemo {
         }
     }
 
-    // Tambahkan method deserialize() untuk membaca kembali objek
     public static Object deserialize(String filename) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
             return ois.readObject();
@@ -58,7 +56,6 @@ public class SerializeDemo {
     public static void main(String[] args) {
         System.out.println("=== Hands-on 9: Serialization ===");
 
-        // 1. Uji dengan satu objek Employee
         Employee e1 = new Employee("John", 30);
         serialize(e1, "data/emp.ser");
 
@@ -68,7 +65,6 @@ public class SerializeDemo {
         }
 
         System.out.println("\n--- Uji dengan Beberapa Objek Berbeda ---");
-        // 2. Uji dengan beberapa objek Employee berbeda
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee("John", 30));
         employees.add(new Employee("Alice", 25));

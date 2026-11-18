@@ -1,11 +1,7 @@
-/**
- * Generic Class Produk<T, U, V> dengan atribut ketiga (misal stok bertipe Integer,
- * atau dapat digunakan untuk menyimpan data Pelanggan / Transaksi).
- */
 public class Produk<T, U, V> {
-    private T atribut1; // Nama Produk / ID Pelanggan / ID Transaksi
-    private U atribut2; // Harga / Nama Pelanggan / Nominal Transaksi
-    private V atribut3; // Stok (Integer) / Status / Metode Pembayaran
+    private T atribut1;
+    private U atribut2;
+    private V atribut3;
 
     public Produk(T atribut1, U atribut2, V atribut3) {
         this.atribut1 = atribut1;

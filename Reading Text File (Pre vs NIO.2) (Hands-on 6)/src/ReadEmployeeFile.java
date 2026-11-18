@@ -13,13 +13,11 @@ public class ReadEmployeeFile {
         Path sourcePath = Paths.get("data/employees.txt");
         Path copyPath = Paths.get("data/copy_employees.txt");
 
-        // 1. Tambahkan deteksi jika file tidak ditemukan
         if (Files.notExists(sourcePath)) {
             System.out.println("Peringatan: File '" + sourcePath.toAbsolutePath() + "' tidak ditemukan!");
             return;
         }
 
-        // 2. Simpan hasil baca ke ArrayList<String>
         ArrayList<String> employeeList = new ArrayList<>();
 
         try (BufferedReader br = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {
@@ -37,7 +35,6 @@ public class ReadEmployeeFile {
             System.out.println(" - " + emp);
         }
 
-        // 3. Tuliskan ke file baru copy_employees.txt
         try {
             Files.write(copyPath, employeeList, StandardCharsets.UTF_8);
             System.out.println("\nData berhasil disalin ke file baru: " + copyPath);
@@ -46,4 +43,3 @@ public class ReadEmployeeFile {
         }
     }
 }
-

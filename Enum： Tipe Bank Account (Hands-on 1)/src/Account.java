@@ -38,13 +38,11 @@ public class Account {
     public static void main(String[] args) {
         System.out.println("=== Hands-on 1: Enum: Tipe Bank Account ===");
 
-        // Uji di main() dengan mencetak semua tipe enum
         System.out.println("\nDaftar Semua Tipe Enum:");
         for (AccountType type : AccountType.values()) {
             System.out.println("- " + type.name() + " -> " + type);
         }
 
-        // Uji pembuatan objek Account untuk setiap tipe
         System.out.println("\nUji Objek Account:");
         Account acc1 = new Account(AccountType.SAVINGS);
         Account acc2 = new Account(AccountType.CREDIT);

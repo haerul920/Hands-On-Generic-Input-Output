@@ -19,7 +19,6 @@ public class Pair<T1, T2> {
         System.out.println("Tipe: " + first.getClass().getName() + " & " + second.getClass().getName());
     }
 
-    // Method swap() untuk menukar nilai (mengembalikan Pair<T2, T1>)
     public Pair<T2, T1> swap() {
         return new Pair<>(this.second, this.first);
     }
@@ -32,7 +31,6 @@ public class Pair<T1, T2> {
     public static void main(String[] args) {
         System.out.println("=== Hands-on 4: Generic Class Multi-Tipe ===");
 
-        // Buat Pair<Integer, String>
         Pair<Integer, String> pair1 = new Pair<>(101, "Budi Santoso");
         System.out.println("Sebelum swap pair1 : " + pair1);
         pair1.showTypes();
@@ -43,7 +41,6 @@ public class Pair<T1, T2> {
 
         System.out.println();
 
-        // Buat Pair<Double, Boolean>
         Pair<Double, Boolean> pair2 = new Pair<>(98.5, true);
         System.out.println("Sebelum swap pair2 : " + pair2);
         pair2.showTypes();

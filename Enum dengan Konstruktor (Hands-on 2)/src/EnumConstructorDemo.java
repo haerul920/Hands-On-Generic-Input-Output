@@ -24,7 +24,6 @@ public class EnumConstructorDemo {
     public static void main(String[] args) {
         System.out.println("=== Hands-on 2: Enum dengan Konstruktor ===");
 
-        // Buat loop menampilkan semua tipe beserta nama, kode, dan suku bunganya
         for (AccountType type : AccountType.values()) {
             System.out.printf("Nama: %-10s | Kode: %-4s | Suku Bunga: %.2f%%%n",
                     type.name(), type.getCode(), type.getInterestRate());

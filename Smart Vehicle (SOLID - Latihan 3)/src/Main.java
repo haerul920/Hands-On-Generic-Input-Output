@@ -1,4 +1,3 @@
-// 1. Pemisahan interface menjadi spesifik sesuai kemampuan kendaraan (ISP)
 interface Vehicle {
     void bergerak();
 }
@@ -15,7 +14,6 @@ interface BateraiVehicle {
     void isiBaterai();
 }
 
-// 2. Implementasi tiap jenis kendaraan hanya pada interface yang relevan (ISP, LSP & OCP)
 class MobilListrik implements Vehicle, MesinVehicle, BateraiVehicle {
     @Override
     public void startEngine() {
@@ -50,7 +48,6 @@ class MobilBensin implements Vehicle, MesinVehicle, BahanBakarVehicle {
     }
 }
 
-// Sepeda tidak dipaksa memiliki startEngine(), isiBahanBakar(), atau isiBaterai()
 class Sepeda implements Vehicle {
     @Override
     public void bergerak() {
@@ -58,7 +55,6 @@ class Sepeda implements Vehicle {
     }
 }
 
-// 3. Controller bergantung pada abstraksi sehingga mudah menambah kendaraan baru (OCP & DIP)
 class SmartVehicleManager {
     public void jalankanKendaraan(Vehicle vehicle) {
         vehicle.bergerak();
@@ -83,21 +79,9 @@ public class Main {
 
         Sepeda polygon = new Sepeda();
 
-        // Menjalankan semua jenis kendaraan melalui abstraksi Vehicle (OCP & LSP)
         SmartVehicleManager manager = new SmartVehicleManager();
         manager.jalankanKendaraan(tesla);
         manager.jalankanKendaraan(avanza);
         manager.jalankanKendaraan(polygon);
-
-        System.out.println("\n--- Jawaban Pertanyaan Latihan 3 ---");
-        System.out.println("1. Prinsip SOLID yang dilanggar:");
-        System.out.println("   - Interface Segregation Principle (ISP) & Single Responsibility Principle (SRP): Semua fitur (mesin, bensin, baterai) digabung dalam satu kelas/interface Vehicle.");
-        System.out.println("   - Liskov Substitution Principle (LSP): Objek Sepeda yang dibuat dari Vehicle memiliki metode startEngine() padahal sepeda tidak bermesin, sehingga memicu anomali/error saat runtime.");
-        System.out.println("   - Open-Closed Principle (OCP): Sulit menambah jenis kendaraan baru (misal Kapal/Pesawat/Skuter) tanpa mengubah kelas Vehicle.");
-        System.out.println("2. Solusi sesuai Interface Segregation Principle (ISP):");
-        System.out.println("   - Memecah kemampuan kendaraan menjadi interface kecil yang spesifik: `Vehicle` (bergerak), `MesinVehicle` (startEngine), `BahanBakarVehicle` (isiBahanBakar), dan `BateraiVehicle` (isiBaterai).");
-        System.out.println("   - Kelas `MobilListrik`, `MobilBensin`, dan `Sepeda` hanya mengimplementasikan interface yang sesuai dengan fiturnya.");
-        System.out.println("3. Cara membuat struktur fleksibel sesuai Open-Closed Principle (OCP):");
-        System.out.println("   - Menggunakan abstraksi (`Vehicle`, dll.) sebagai kontrak dasar. Ketika ada kendaraan baru (misal `MotorListrik` atau `KapalLayar`), kita cukup membuat class baru yang mengimplementasikan interface terkait tanpa memodifikasi kode yang sudah ada.");
     }
 }
